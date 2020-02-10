@@ -9,7 +9,9 @@ const forecast = (lat,long,callback) =>{
 
         callback('provide valid string',undefined)
       }else{
-        callback(undefined,body.daily.data[0].summary+'it is currently clear weather out'+body.currently.precipProbability+'%chance of rain')
+        callback(undefined,body.daily.data[0].summary+' It is currently pleasent weather out with '+ body.currently.temperature + 
+        ' .There is a ' + body.currently.precipProbability + ' % chance for rain .The High temperature today is ' + body.daily.data[0].temperatureHigh + 
+        ' The Low temperature is ' + body.daily.data[0].temperatureLow )
 
       }
     
